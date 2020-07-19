@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.collection.CollectionTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-07-19T11:33:14" hostname="DESKTOP-4070S8E" time="0.006">
+  <properties/>
+  <testcase name="testOddNumbersExterminatorEmptyList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.003"/>
+  <testcase name="testOddNumbersExterminatorNormalList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.002"/>
+  <system-out><![CDATA[Test suit: BEGIN
+Test case: BEGIN !
+Testing empty list
+Size of the first list with all numbers: 0
+Size of the second list only with even numbers: 0
+Test case: END!
+Test case: BEGIN !
+Testing normal list
+Even number: 2
+Even number: 4
+Even number: 6
+Even number: 8
+Even number: 10
+Even number: 12
+Even number: 14
+Even number: 16
+Even number: 18
+Even number: 20
+Even number: 22
+Even number: 24
+Even number: 26
+Even number: 28
+Even number: 30
+Even number: 32
+Even number: 34
+Even number: 36
+Even number: 38
+Even number: 40
+Even number: 42
+Even number: 44
+Even number: 46
+Even number: 48
+Even number: 50
+Even number: 52
+Size of the first list with all numbers: 52
+Size of the second list only with even numbers: 26
+Test case: END!
+Test suit: END!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
