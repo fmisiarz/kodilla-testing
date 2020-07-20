@@ -27,6 +27,5 @@ if (addRes==8 || subRes==2) {
         for (int i=0; i<5;i++) {
             numbers.add(i + 1);
         }
-    ext1.exterminate(numbers);
     }
 }

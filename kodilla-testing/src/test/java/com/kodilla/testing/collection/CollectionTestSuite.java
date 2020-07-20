@@ -27,9 +27,7 @@ public class CollectionTestSuite {
         System.out.println("Testing empty list");
         OddNumbersExterminator ext1= new OddNumbersExterminator();
         ArrayList<Integer> numbers=new ArrayList<Integer>();
-        for (int i=0; i<0;i++) {
-            numbers.add(i + 1);
-        }
+
         Integer listSize=numbers.size();
         Integer zero=0;
         ext1.exterminate(numbers);
@@ -40,13 +38,15 @@ public class CollectionTestSuite {
         System.out.println("Testing normal list");
         OddNumbersExterminator ext1= new OddNumbersExterminator();
         ArrayList<Integer> numbers=new ArrayList<Integer>();
-        for (int i=0; i<52;i++) {
+        for (int i=0; i<10;i++) {
             numbers.add(i + 1);
         }
-        Integer listSize=numbers.size();
-        Integer sizeIs=52;
-        ext1.exterminate(numbers);
-        Assert.assertEquals(sizeIs,listSize);
+        ArrayList<Integer> listVar=new ArrayList<Integer>();
+        ArrayList<Integer> listVar2;
+        listVar2=ext1.exterminate(numbers);
+        listVar.add(2); listVar.add(4); listVar.add(6); listVar.add(8); listVar.add(10);
+        System.out.println("Comparing expected list: "+listVar+" with actual: "+listVar2);
+        Assert.assertEquals(listVar,listVar2);
     }
     }
 
