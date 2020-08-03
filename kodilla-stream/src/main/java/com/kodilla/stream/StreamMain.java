@@ -2,6 +2,7 @@ package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.beautifier.PoemDecorator;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -34,8 +35,7 @@ poemBeautifier.beautify("Text to decorate","ABC",(textToDecore,ABC)->ABC+textToD
         poemBeautifier.beautify("Text to decorate","ABC",(textToDecore,ABC)->textToDecore.toUpperCase());
         poemBeautifier.beautify("Text to decorate","ABC",(textToDecore,ABC)->"Trying to uderstand "+textToDecore.toUpperCase());
         poemBeautifier.beautify("Text to decorate","ABC",(textToDecore,ABC)->textToDecore+". GOT IT");
-
-
-
+        System.out.println("Using Stream to generate even numbers from 1 to 13");
+        NumbersGenerator.generateEven(13);
     }
 }
