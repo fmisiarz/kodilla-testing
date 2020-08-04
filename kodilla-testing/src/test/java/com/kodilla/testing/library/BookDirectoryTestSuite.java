@@ -95,7 +95,7 @@ public class BookDirectoryTestSuite {
         //when
         List<Book> ListBooksInHandsOf1 =bookLibrary.listBooksInHandsOf(libraryUser1);
         //then
-        assertEquals(0,ListBooksInHandsOf1.size());
+        assertEquals(resultListBooksInHandsOf1,ListBooksInHandsOf1);
 
     }
     @Test
@@ -104,13 +104,14 @@ public class BookDirectoryTestSuite {
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser libraryUser1=new LibraryUser("Filip","Misiarz","1991110101929");
         List<Book> resultListBooksInHandsOf1=new ArrayList<Book>();
+        Book book1=new Book("mathew","the big why",2003);
+        resultListBooksInHandsOf1.add(book1);
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser1)).thenReturn(resultListBooksInHandsOf1);
         //when
         List<Book> ListBooksInHandsOf1 =bookLibrary.listBooksInHandsOf(libraryUser1);
-        Book book1=new Book("mathew","the big why",2003);
-        ListBooksInHandsOf1.add(book1);
+
         //then
-        assertEquals(1,ListBooksInHandsOf1.size());
+        assertEquals(resultListBooksInHandsOf1,ListBooksInHandsOf1);
 
     }
     @Test
@@ -119,22 +120,23 @@ public class BookDirectoryTestSuite {
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         LibraryUser libraryUser1=new LibraryUser("Filip","Misiarz","1991110101929");
         List<Book> resultListBooksInHandsOf1=new ArrayList<Book>();
-        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser1)).thenReturn(resultListBooksInHandsOf1);
-        //when
-        List<Book> ListBooksInHandsOf1 =bookLibrary.listBooksInHandsOf(libraryUser1);
         Book book1=new Book("mathew","the big why",2003);
         Book book2=new Book("John","the big yes",2012);
         Book book3=new Book("Jenna","Clouds",2103);
         Book book4=new Book("Smith","Animals",1993);
         Book book5=new Book("Jan","Forest",2013);
 
-        ListBooksInHandsOf1.add(book1);
-        ListBooksInHandsOf1.add(book2);
-        ListBooksInHandsOf1.add(book3);
-        ListBooksInHandsOf1.add(book4);
-        ListBooksInHandsOf1.add(book5);
+        resultListBooksInHandsOf1.add(book1);
+        resultListBooksInHandsOf1.add(book2);
+        resultListBooksInHandsOf1.add(book3);
+        resultListBooksInHandsOf1.add(book4);
+        resultListBooksInHandsOf1.add(book5);
+        when(libraryDatabaseMock.listBooksInHandsOf(libraryUser1)).thenReturn(resultListBooksInHandsOf1);
+        //when
+        List<Book> ListBooksInHandsOf1 =bookLibrary.listBooksInHandsOf(libraryUser1);
+
         //then
-        assertEquals(5,ListBooksInHandsOf1.size());
+        assertEquals(resultListBooksInHandsOf1,ListBooksInHandsOf1);
 
     }
 }
