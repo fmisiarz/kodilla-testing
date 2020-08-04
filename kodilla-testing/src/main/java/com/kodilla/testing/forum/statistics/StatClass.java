@@ -4,37 +4,55 @@ import java.util.List;
 
 public class StatClass {
     Statistics statistics;
+    private int postsCount(){
+        return statistics.postsCount();
+    }
+    private int usersCount(){
+        return statistics.usersNames().size();
+    }
+    private int commentsCount(){
+        return statistics.commentsCount();
+    }
+    private int postAveragePerUser(){
+        return statistics.postsCount()/statistics.usersNames().size();
+    }
+    private int commentAveragePerUser(){
+        return statistics.commentsCount()/statistics.usersNames().size();
+    };
+    private int commentAveragePerPost(){
+        return statistics.commentsCount()/statistics.postsCount();
+    };
     public StatClass(Statistics statistics) {
         this.statistics = statistics;
     }
         public int getUsersCount () {
 
-            return statistics.usersNames().size();
+            return usersCount();
         }
     public int getPostsCount () {
-        return statistics.postsCount();
+        return postsCount();
     }
     public int getCommentsCount () {
-        return statistics.commentsCount();
+        return commentsCount();
     }
     public int getPostAveragePerUser () {
-        return statistics.postsCount()/statistics.usersNames().size();
+        return postAveragePerUser();
     }
     public int getCommentAveragePerUser () {
-        return (statistics.commentsCount()/statistics.usersNames().size());
+        return commentAveragePerUser();
     }
         public int getCommentAveragePerPost () {
-            return statistics.commentsCount()/statistics.postsCount();        }
+            return commentAveragePerPost();        }
             public List<String> usersNames () {
             return statistics.usersNames();
         }
     void calculateAdvStatistics(Statistics statistics) {
-        getUsersCount();
-        getPostsCount();
-        getCommentsCount();
-        getPostAveragePerUser();
-        getCommentAveragePerUser();
-        getCommentAveragePerPost();
+        int calcUserCount=getUsersCount();
+        int calcPostsCount=getPostsCount();
+        int calcCommentsCount=getCommentsCount();
+        int calcPostAveragePerUser=getPostAveragePerUser();
+       int calcCommentAveragePerUser= getCommentAveragePerUser();
+        int calcCommentAveragePerPost = getCommentAveragePerPost();
     }
     void showStatistics() {
         System.out.println("Comment average per post: " + getCommentAveragePerPost() + ". Comment average per user: "

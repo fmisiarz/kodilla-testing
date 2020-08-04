@@ -38,6 +38,7 @@ public class StatisticsTestSuite {
         StatClass statClass = new StatClass(statisticsMock);
         List<String> resUserNames=new ArrayList<>();
         resUserNames.add("Filip");
+        resUserNames.add("Karol");
         when(statisticsMock.usersNames()).thenReturn(resUserNames);
         int resCommentsCount=11;
         when(statisticsMock.commentsCount()).thenReturn(resCommentsCount);
@@ -50,7 +51,7 @@ public class StatisticsTestSuite {
     @Test
     public void testWhenPostThous() {
         Statistics statisticsMock = mock(Statistics.class);
-        StatClass statistics = new StatClass(statisticsMock);
+        //StatClass statistics = new StatClass(statisticsMock);
        // System.out.println(statistics.getCommentAveragePerPost());
        // statistics.showStatistics();
        // Assert.assertEquals(0, statistics.getPostsCount());
