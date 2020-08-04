@@ -7,17 +7,6 @@ public class StatClass {
     public StatClass(Statistics statistics) {
         this.statistics = statistics;
     }
-
-    void calculateAdvStatistics(Statistics statistics) {
-        getUsersCount();
-        getPostsCount();
-        getCommentsCount();
-        getPostAveragePerUser();
-        getCommentAveragePerUser();
-        getCommentAveragePerPost();
-    }
-
-
         public int getUsersCount () {
 
             return statistics.usersNames().size();
@@ -39,6 +28,14 @@ public class StatClass {
             public List<String> usersNames () {
             return statistics.usersNames();
         }
+    void calculateAdvStatistics(Statistics statistics) {
+        getUsersCount();
+        getPostsCount();
+        getCommentsCount();
+        getPostAveragePerUser();
+        getCommentAveragePerUser();
+        getCommentAveragePerPost();
+    }
     void showStatistics() {
         System.out.println("Comment average per post: " + getCommentAveragePerPost() + ". Comment average per user: "
                 + getCommentAveragePerUser() + ". Post average per user: " + getPostAveragePerUser() + ". Total amount of users: "

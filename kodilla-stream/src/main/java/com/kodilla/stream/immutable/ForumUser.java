@@ -17,7 +17,7 @@ public final class ForumUser {
         return realName;
     }
     //CHECK IF REALNAME IS PRIVATE
-    public void TryToModifyRealName(String modRealName) {
-        realName = modRealName;
+    //public void TryToModifyRealName(String modRealName) {
+       // realName = modRealName;
     }
-}
+
