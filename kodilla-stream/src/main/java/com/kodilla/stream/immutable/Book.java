@@ -21,9 +21,6 @@ public final class Book {
 
     public int getYearOfPublication() {
         return yearOfPublication;
-    }
 
-    public void modifyYearOfPublication(int year) {
-        yearOfPublication = year;
     }
 }
