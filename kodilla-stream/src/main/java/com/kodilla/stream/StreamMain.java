@@ -1,5 +1,5 @@
 package com.kodilla.stream;
-
+import java.math.BigDecimal;
 import com.kodilla.stream.beautifier.PoemBeautifier;
 import com.kodilla.stream.beautifier.PoemDecorator;
 import com.kodilla.stream.book.Book;
@@ -10,6 +10,9 @@ import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.*;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
+import com.kodilla.stream.world.Continent;
+import com.kodilla.stream.world.Country;
+import com.kodilla.stream.world.World;
 
 import java.sql.SQLOutput;
 import java.time.Year;
@@ -60,8 +63,6 @@ poemBeautifier.beautify("Text to decorate","ABC",(textToDecore,ABC)->ABC+textToD
                 .filter(forumUser -> forumUser.getPosts()>1)
                 .collect(Collectors.toMap(ForumUser::getIDN,ForumUser->ForumUser));
         MapForumUser.entrySet().stream().map(entry->entry.getKey()+", "+entry.getValue()).forEach(System.out::println);
-
-
     }
 
 }
