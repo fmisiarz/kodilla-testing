@@ -6,8 +6,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class World {
-public List<Continent> ContinentList = new ArrayList<>();
-public BigDecimal getPeopleQuantity(){
-    return ContinentList.stream().flatMap(Continent->Continent.CountryList.stream()).map(Country::getPeopleQuantity).reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
-}
+    private final List<Continent> continentList;
+
+    public BigDecimal getPeopleQuantity() {
+        return continentList.stream()
+                .flatMap(Continent -> Continent.getCountryList()
+                        .stream()).map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
+    }
+
+    public List<Continent> getContinentList() {
+        return continentList;
+    }
+
+    public World(List<Continent> continentList) {
+        this.continentList = continentList;
+
+    }
 }
