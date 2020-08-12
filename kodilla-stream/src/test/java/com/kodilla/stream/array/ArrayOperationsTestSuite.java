@@ -10,9 +10,9 @@ public class ArrayOperationsTestSuite {
 int[] intNumList=new int[20];
         intNumList[0]=1;
         intNumList[1]=2;
-        intNumList[2]=55;
-        intNumList[3]=4666;
-        intNumList[4]=5121212;
+        intNumList[2]=3;
+        intNumList[3]=4;
+        intNumList[4]=5;
         intNumList[5]=6;
         intNumList[6]=7;
         intNumList[7]=8;
@@ -29,9 +29,9 @@ int[] intNumList=new int[20];
         intNumList[18]=19;
         intNumList[19]=20;
 
-ArrayOperations.getAverage(intNumList);
+double actual =ArrayOperations.getAverage(intNumList);
         Assert.assertEquals(20, intNumList.length);
-            Assert.assertEquals(256306.55,Arrays.stream(intNumList).average().getAsDouble(),0.01);
+            Assert.assertEquals(10.5,actual,0.01);
 
     }
 }

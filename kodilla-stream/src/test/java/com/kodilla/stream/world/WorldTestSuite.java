@@ -44,6 +44,7 @@ public class WorldTestSuite {
         Country Indonesia = new Country("Indonesia", IndonesiaQ);
 
 
+
         countryListForEurope.add(Russia);
         countryListForEurope.add(UnitedKingdom);
         countryListForEurope.add(Germany);
@@ -58,6 +59,5 @@ public class WorldTestSuite {
         countryListForAsia.add(Indonesia);
         BigDecimal expected = new BigDecimal("3813893772");
         Assert.assertEquals(expected, world.getPeopleQuantity());
-
     }
 }
