@@ -32,6 +32,5 @@ int[] intNumList=new int[20];
 double actual =ArrayOperations.getAverage(intNumList);
         Assert.assertEquals(20, intNumList.length);
             Assert.assertEquals(10.5,actual,0.01);
-
     }
 }

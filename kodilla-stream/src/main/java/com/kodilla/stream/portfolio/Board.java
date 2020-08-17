@@ -1,7 +1,6 @@
 package com.kodilla.stream.portfolio;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public final class Board {
@@ -12,13 +11,6 @@ public final class Board {
         this.name = name;
     }
 
-    public List<TaskList> getTaskLists() {
-        return new ArrayList<>(taskLists);
-    }
-
-    public String getName() {
-        return name;
-    }
     public void addTaskList(TaskList taskList) {
         taskLists.add(taskList);
     }
@@ -27,11 +19,19 @@ public final class Board {
         return taskLists.remove(taskList);
     }
 
+    public List<TaskList> getTaskLists() {
+        return new ArrayList<>(taskLists);
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
-        return "Board{" +
-                "taskLists=" + taskLists +
-                ", name='" + name + '\'' +
+        return "Board{" + "\n" +
+                "name='" + name + '\'' + ",\n" +
+                "taskLists=" + taskLists + "\n" +
                 '}';
     }
 }
