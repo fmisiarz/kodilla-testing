@@ -1,7 +1,15 @@
 package com.kodilla.good.patterns.challenges.Food2DoorService;
 
 public class GlutenFreeShop implements ShopInterface{
-    public void process(){
+    private String shopName="GlutenFreeShop";
+private boolean process;
+    @Override
+    public String getShopName() {
+        return shopName;
+    }
+        public boolean process(Client client,Product product){
+            return process;
+
 
     }
 }
