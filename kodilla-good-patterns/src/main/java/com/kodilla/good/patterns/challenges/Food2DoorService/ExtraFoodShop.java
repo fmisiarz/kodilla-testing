@@ -5,13 +5,12 @@ import java.util.List;
 import java.util.Map;
 
 public class ExtraFoodShop implements ShopInterface{
-    private String shopName="ExtraFoodShop";
     private boolean process;
     @Override
     public String getShopName() {
-        return shopName;
-    }
+        String shopName = "ExtraFoodShop";
+    return shopName;}
     public boolean process(Client client,Product product){
-        return process;
+        return true;
     }
 }

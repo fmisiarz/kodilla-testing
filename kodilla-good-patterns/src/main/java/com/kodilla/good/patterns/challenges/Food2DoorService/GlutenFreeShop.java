@@ -8,7 +8,7 @@ private boolean process;
         return shopName;
     }
         public boolean process(Client client,Product product){
-            return process;
+            return true;
 
 
     }

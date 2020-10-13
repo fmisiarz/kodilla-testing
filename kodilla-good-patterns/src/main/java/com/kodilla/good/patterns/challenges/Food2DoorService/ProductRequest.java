@@ -6,6 +6,7 @@ public class ProductRequest {
     public ProductRequest(Client client, Product product) {
         this.client = client;
         this.product = product;
+
     }
 
     public Client getClient() {
