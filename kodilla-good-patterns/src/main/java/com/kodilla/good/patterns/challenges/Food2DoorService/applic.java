@@ -4,7 +4,7 @@ public class applic {
     public static void main(String[] args) {
 ProductRequestRetriever productRequestRetriever=new ProductRequestRetriever();
 ProductRequest productRequest= productRequestRetriever.retrieve();
-    Processor processor=new Processor(new ExtraFoodShop(),new MailService(),new ProductBaseRepo());
+    Processor processor=new Processor(new GlutenFreeShop(),new MailService(),new ProductBaseRepo());
     processor.process(productRequest);
     }
 }

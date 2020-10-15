@@ -6,9 +6,9 @@ import java.util.Map;
 
 public class ExtraFoodShop implements ShopInterface{
     private boolean process;
+    private String shopName="ExtraFoodShop";
     @Override
     public String getShopName() {
-        String shopName = "ExtraFoodShop";
     return shopName;}
     public boolean process(Client client,Product product){
         return true;

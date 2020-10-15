@@ -12,8 +12,8 @@ public class Processor {
     public ProductDto process(final ProductRequest productRequest){
         boolean isDone= shopInterface.process(productRequest.getClient(),productRequest.getProduct());
         if(isDone) {
-            infoService.info(productRequest.getClient());
-            productRepository.createProduct(productRequest.getClient(), productRequest.getProduct());
+            infoService.info(productRequest.getClient(),shopInterface);
+            productRepository.createProduct(productRequest.getClient(), productRequest.getProduct(),shopInterface);
             return new ProductDto(productRequest.getClient(), true);
         } else {
             return new ProductDto(productRequest.getClient(),false);
